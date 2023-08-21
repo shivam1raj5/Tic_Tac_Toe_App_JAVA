@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
+int flag=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,13 @@ Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     }
 
     public void check(View view){
-
+        Button btnCurrent = (Button) view;
+        if(flag==0){
+            btnCurrent.setText("X");
+            flag=1;
+        } else {
+            btnCurrent.setText("O");
+            flag=0;
+        }
     }
 }
