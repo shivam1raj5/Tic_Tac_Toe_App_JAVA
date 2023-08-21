@@ -81,8 +81,11 @@ int count=0;
         } else if (b3.equals(b5) && b5.equals(b7) && !b3.equals("")) {
             Toast.makeText(this, "Winner is : " + b3, Toast.LENGTH_SHORT).show();
             newGame();
+        } else if (count==9) {
+            Toast.makeText(this, "Game Drawn", Toast.LENGTH_SHORT).show();
+            newGame();
         }
-     }
+        }
     }
     public void newGame(){
         btn1.setText("");
